@@ -293,36 +293,7 @@ namespace ModernAppliances
                 {
                 found_appliances.Add(Appliances[number]);
                 }
-            // Test inputted appliance type is "0"
-            // Add current appliance in list to found list
-            //if(app_type == "0")
-            //    {
-            //    found_appliances.Add(appliance);
-            //    }else if(app_type == "1")
-            //    {
-            //        if(appliance is Refrigerator)
-            //            {
-            //                found_appliances.Add(appliance);
-            //            }
-            //    }else if(app_type == "2")
-            //    {
-            //        if(appliance is Vacuum) 
-            //            { 
-            //                found_appliances.Add(appliance);
-            //            }
-            //    }else if(app_type == "3")
-            //    {
-            //    if (appliance is Microwave)
-            //        {
-            //        found_appliances.Add(appliance);
-            //        }
-            //    }else if(app_type == "4")
-            //    {
-            //     if (appliance is Dishwasher)
-            //        {
-            //        found_appliances.Add(appliance);
-            //        }
-            //    }
+          
 
 
             // Test inputted appliance type is "1"
