@@ -211,18 +211,6 @@ namespace ModernAppliances
         /// </summary>
         public override void RandomList()
             {
-            // Write "Appliance Types"
-            //Console.WriteLine("Appliance Types:\n0 - Any\n1 – Refrigerators\n2 – Vacuums\n3 – Microwaves\n4 – Dishwashers");
-            // Write "0 - Any"
-            // Write "1 – Refrigerators"
-            // Write "2 – Vacuums"
-            // Write "3 – Microwaves"
-            // Write "4 – Dishwashers"
-
-            // Write "Enter type of appliance:"
-            // Console.WriteLine("Enter type of appliance:");
-            // Get user input as string and assign to appliance type variable
-            //string app_type = Console.ReadLine();
             // Write "Enter number of appliances: "
             Console.WriteLine("Enter number of appliances: ");
             // Get user input as string and assign to variable
@@ -241,12 +229,10 @@ namespace ModernAppliances
             List<Appliance> found_appliances = new List<Appliance>();
 
             // Loop through appliances
-
             foreach (var number in random_number)
                 {
                 found_appliances.Add(Appliances[number]);
                 }
-     
 
             // Randomize list of found appliances
             // found.Sort(new RandomComparer());
