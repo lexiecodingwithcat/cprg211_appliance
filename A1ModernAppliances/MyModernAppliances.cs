@@ -16,7 +16,7 @@ namespace ModernAppliances
         /// </summary>
         public override void Checkout()
             {
-            Console.WriteLine("Enter the item number of an appliance: ");
+            Console.WriteLine("Enter the item number of an appliance: \n");
             long item_num;
             item_num = long.Parse(Console.ReadLine());
             Appliance? foundAppliance = null;
@@ -55,8 +55,8 @@ namespace ModernAppliances
 
         public override void Find()
             {
-            Console.WriteLine("Enter brand to search for: ");
-            string input_brand = Console.ReadLine() ?? "";
+            Console.WriteLine("Enter brand to search for:");
+            string input_brand = Console.ReadLine();
             List<Appliance> found = new List<Appliance>();
             foreach (Appliance appliance in Appliances)
                 {
@@ -77,7 +77,7 @@ namespace ModernAppliances
         public override void DisplayRefrigerators()
             {
             // Write "Possible options:"
-            Console.WriteLine("Enter number of doors: 2 (double door), 3 (three doors) or 4 (four doors): ");
+            Console.WriteLine("Enter number of doors: 2 (double door), 3 (three doors) or 4 (four doors):");
             // Create variable to hold entered number of doors           
 
             int number_doors = Convert.ToInt32(Console.ReadLine());
@@ -148,7 +148,7 @@ namespace ModernAppliances
             {
 
             // Write "Enter room type:"
-            Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site): ");
+            Console.WriteLine("Room where the microwave will be installed: K (kitchen) or W (work site):");
             // Get user input as string and assign to variable
             string input_room = Console.ReadLine();
 
@@ -212,7 +212,7 @@ namespace ModernAppliances
         public override void RandomList()
             {
             // Write "Enter number of appliances: "
-            Console.WriteLine("Enter number of appliances: ");
+            Console.WriteLine("Enter number of appliances:");
             // Get user input as string and assign to variable
             int app_number = int.Parse(Console.ReadLine());
             //a list to save random number

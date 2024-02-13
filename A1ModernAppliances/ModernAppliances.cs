@@ -89,7 +89,7 @@ namespace ModernAppliances
             Console.WriteLine("3 – Microwaves");
             Console.WriteLine("4 – Dishwashers");
 
-            Console.Write("Enter type of appliance:");
+            Console.WriteLine("Enter type of appliance:");
 
             int applianceTypeNum;
             bool parsedApplianceType = int.TryParse(Console.ReadLine(), out applianceTypeNum);
