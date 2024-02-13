@@ -15,55 +15,61 @@ namespace ModernAppliances
         /// Option 1: Performs a checkout
         /// </summary>
         public override void Checkout()
-        {
-            // Write "Enter the item number of an appliance: "
+            {
+            Console.WriteLine("Enter the item number of an appliance: ");
+            long item_num;
+            item_num = long.Parse(Console.ReadLine());
+            Appliance? foundAppliance = null;
+            foreach (Appliance appliance in Appliances)
+                {
 
-            // Create long variable to hold item number
+                if (appliance.ItemNumber == item_num)
+                    {
+                    // add appliance to the found list
+                    foundAppliance = appliance;
+                    break;
+                    }
 
-            // Get user input as string and assign to variable.
-            // Convert user input from string to long and store as item number variable.
-
-            // Create 'foundAppliance' variable to hold appliance with item number
-            // Assign null to foundAppliance (foundAppliance may need to be set as nullable)
-
-            // Loop through Appliances
-                // Test appliance item number equals entered item number
-                    // Assign appliance in list to foundAppliance variable
-
-                    // Break out of loop (since we found what need to)
-
-            // Test appliance was not found (foundAppliance is null)
-                // Write "No appliances found with that item number."
-
-            // Otherwise (appliance was found)
+                }
+            if (foundAppliance == null)
+                {
+                Console.WriteLine("No appliances found with that item number.");
+                }
+            else
+                {
                 // Test found appliance is available
-                    // Checkout found appliance
-
-                    // Write "Appliance has been checked out."
-                // Otherwise (appliance isn't available)
-                    // Write "The appliance is not available to be checked out."
-        }
-
+                if (foundAppliance.IsAvailable)
+                    {
+                    foundAppliance.Checkout();
+                    Console.WriteLine($"Appliance '{item_num}' has been checked out.");
+                    }
+                else
+                    {
+                    Console.WriteLine("The appliance is not available to be checked out.");
+                    }
+                }
+            }
         /// <summary>
         /// Option 2: Finds appliances
         /// </summary>
+
         public override void Find()
-        {
-            // Write "Enter brand to search for:"
+            {
+            Console.WriteLine("Enter brand to search for: ");
+            string input_brand = Console.ReadLine() ?? "";
+            List<Appliance> found = new List<Appliance>();
+            foreach (Appliance appliance in Appliances)
+                {
+                if (appliance.Brand == input_brand)
+                    {
+                    found.Add(appliance);
+                    }
+                }
+            //Display found appliances
+            DisplayAppliancesFromList(found, 0);
 
-            // Create string variable to hold entered brand
-            // Get user input as string and assign to variable.
+            }
 
-            // Create list to hold found Appliance objects
-
-            // Iterate through loaded appliances
-                // Test current appliance brand matches what user entered
-                    // Add current appliance in list to found list
-
-
-            // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
-        }
 
         /// <summary>
         /// Displays Refridgerators
@@ -293,21 +299,7 @@ namespace ModernAppliances
                 {
                 found_appliances.Add(Appliances[number]);
                 }
-          
-
-
-            // Test inputted appliance type is "1"
-            // Test current appliance type is Refrigerator
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "2"
-            // Test current appliance type is Vacuum
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "3"
-            // Test current appliance type is Microwave
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "4"
-            // Test current appliance type is Dishwasher
-            // Add current appliance in list to found list
+     
 
             // Randomize list of found appliances
             // found.Sort(new RandomComparer());
