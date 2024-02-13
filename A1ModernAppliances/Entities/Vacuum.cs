@@ -57,8 +57,21 @@ namespace ModernAppliances.Entities
             return formatted;
         }
 
+
         public override string ToString()
-        {
+            {
+            string voltage_text;
+
+            if (BatteryVoltage == 18)
+                {
+                voltage_text = "Low";
+                }
+            else if (BatteryVoltage == 24)
+                {
+                voltage_text = "High";
+                }
+            else { voltage_text = "Null"; }
+
             string display =
                 string.Format("Item Number: {0}", ItemNumber) + "\n" +
                 string.Format("Brand: {0}", Brand) + "\n" +
@@ -67,9 +80,9 @@ namespace ModernAppliances.Entities
                 string.Format("Color: {0}", Color) + "\n" +
                 string.Format("Price: {0}", Price) + "\n" +
                 string.Format("Grade: {0}", Grade) + "\n" +
-                string.Format("Battery Voltage: {0}", BatteryVoltage);
+                string.Format("Battery Voltage: {0}", voltage_text);
 
             return display;
+            }
         }
-    }
 }

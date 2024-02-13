@@ -33,7 +33,7 @@ namespace ModernAppliances
                 }
             if (foundAppliance == null)
                 {
-                Console.WriteLine("No appliances found with that item number.");
+                Console.WriteLine("No appliances found with that item number.\n");
                 }
             else
                 {
@@ -41,11 +41,11 @@ namespace ModernAppliances
                 if (foundAppliance.IsAvailable)
                     {
                     foundAppliance.Checkout();
-                    Console.WriteLine($"Appliance '{item_num}' has been checked out.");
+                    Console.WriteLine($"Appliance \"{item_num}\" has been checked out.\n");
                     }
                 else
                     {
-                    Console.WriteLine("The appliance is not available to be checked out.");
+                    Console.WriteLine("The appliance is not available to be checked out.\n");
                     }
                 }
             }
